@@ -1,12 +1,39 @@
 class BottomLeft extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { items: [], text: '' };
+      this.state = { items: [], text: '', translated: false };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
   
     render() {
+      if (this.state.translated) {
+        return React.createElement(
+          "div",
+          null,
+          React.createElement("input", {
+            id: "searchBar2",
+            onChange: this.handleChange,
+            value: this.state.text
+          }),
+          React.createElement(
+            "button",
+            null,
+            "Tags"
+          ),
+          React.createElement(
+            "button",
+            null,
+            "New!"
+          ),
+          React.createElement(
+            'button',
+            { onClick: () => this.setState({ translated: false }) },
+            'English'
+          ),
+        );
+      }
+
       return React.createElement(
         "div",
         null,
@@ -26,14 +53,14 @@ class BottomLeft extends React.Component {
           "New!"
         ),
         React.createElement(
-          "button",
-          null,
-          "Cymraeg"
+          'button',
+          { onClick: () => this.setState({ translated: true }) },
+          'Cymraeg'
         ),
-
       );
     }
   
+
     handleChange(e) {
       this.setState({ text: e.target.value });
     }

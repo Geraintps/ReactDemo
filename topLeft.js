@@ -1,24 +1,65 @@
 class TopLeft extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { items: [], text: '' };
+    this.state = { items: [], text: '', signedin: false };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   render() {
+    if (this.state.signedin) {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "label",
+          null,
+          "Signed In"
+        ),
+        React.createElement(
+          "button",
+          null,
+          "?"
+        ),
+        React.createElement(
+          "button",
+          null,
+          "+"
+        ),
+        React.createElement(
+          "button",
+          null,
+          "🏠"
+        ),
+        React.createElement(
+          "p",
+          null,
+          ""
+        ),
+        React.createElement("input", {
+          id: "searchBar",
+          onChange: this.handleChange,
+          value: this.state.text
+        }),
+      )
+    }
     return React.createElement(
       "div",
       null,
       React.createElement(
-        "button",
-        null,
-        "Sign In"
+        'button',
+        { onClick: () => this.setState({ signedin: true }) },
+        'Sign In'
       ),
       React.createElement(
         "button",
         null,
         "?"
+      ),
+      React.createElement(
+        "button",
+        null,
+        "+"
       ),
       React.createElement(
         "button",
