@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: 25px;
     font-family: "Segoe UI", Helvetica, Arial, Sans-Serif;
     font-size: 24pt;
     overflow: hidden;
@@ -10,4 +10,45 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+body img {
+    top: -25px;
+    left: -25px;
+    position: absolute;
+    width: 105%;
+    height: 105%;
+}
+#topLeftControls {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+#topRightControls {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+#bottomLeftControls {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+#topRightControls button{
+    border-radius: 30px;
+    padding: 5px 10px;
+    font-size: larger;
+}
+#topLeftControls button {
+    padding: 5px 10px;
+    font-size: larger;
+    border-radius: 15px;
+}
+#bottomLeftControls button {
+    padding: 5px 10px;
+    font-size: larger;
+    border-radius: 15px;
+}
+input {
+    font-size: larger;
+    box-shadow: 0px 0px 0px 2px;
 }
