@@ -26,6 +26,12 @@ body img {
     left: 10%;
     text-align: center;
 }
+.popupBox{
+    background-color: white;
+    height: 800px;
+    box-shadow: 0px 0px 10px 0px;
+    padding: 10px;
+}
 #topLeftControls {
     position: absolute;
     top: 8px;
@@ -46,6 +52,17 @@ body img {
     padding: 5px 10px;
     font-size: larger;
 }
+#popupContainer .popupBox button {
+    border-radius: 30px;
+    font-size: large;
+    
+}
+#popupContainer .popupBox label {
+    float: right;
+}
+#popupContainer .popupBox input {
+    width: 90%;
+}
 #topRightControls button{
     border-radius: 30px;
     padding: 5px 10px;
@@ -63,29 +80,21 @@ body img {
 }
 input {
     font-size: larger;
-    box-shadow: 0px 0px 0px 2px;
+    box-shadow: 0px 0px 5px 0px;
+    border: white;
+    
 }
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    width: 80%;
-    height: 50%;
-    background-color: rgba(0,0,0,0.25);
-  }
-  
-  .modal_content {
-    background-color: white;
-    position: absolute;
-    top: 20%;
-    left: 25%;
-    width: 40%;
-    padding: 20px;
-    border-radius: 5px;
-    border: 2px solid black;
-  }
-  
-  .close {
-    color: Black;
+input:focus{
+    box-shadow: 0px 0px 20px 0px;
+}
+.description{
+    height: 70%;
+
+}
+.closePopup{
     float: right;
-  }
+    background-color: red;
+}
+.tags{
+    float: left;
+}
